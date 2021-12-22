@@ -14,8 +14,6 @@ function sumSalary(salaries) {
 
     if (typeof salaries[key] == 'number' && isFinite(salaries[key])) {
       sum += salaries[key];
-    } else {
-      sum = 0;
     }
   }
   return sum;
