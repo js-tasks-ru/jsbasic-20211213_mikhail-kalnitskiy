@@ -1,13 +1,13 @@
 function showSalary(users, age) {
-  let someUsers = users.filter(item => item.age <= age);
+   // Фильтрует пользователей, которые нам подходят
+   let someUsers = users.filter(item => item.age <= age);
 
-  let usersMapped = someUsers.map(item => {
-    for(let i=0; i<users.length-1; i++) {
-      `${item.name}, ${item.balance}\n`
-    }
-    someUsers.push(someUsers[someUsers.length]);
-  });
+   // Создает массив строк
+   let usersMapped = someUsers.map(item => {
+     return `${item.name}, ${item.balance}`
+   });
 
-  return String(usersMapped);
+   // Объединяет массив в одну строку
+   return usersMapped.join('\n');
 };
 
