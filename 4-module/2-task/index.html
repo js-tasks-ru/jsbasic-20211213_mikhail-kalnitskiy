@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <table>
+  <table id="table">
     <tr>
       <td>1:1</td>
       <td>2:1</td>
@@ -57,7 +57,16 @@
   <script>
     let table = document.querySelector('table');
 
+    function makeDiagonalRed(table) {
+      for (let i = 0; i < table.rows.length; i++) {
+      let row = table.rows[i];
+      row.cells[i].style.backgroundColor = 'red';
+    }
+    return;
+    };
+
     makeDiagonalRed(table);
+
   </script>
 </body>
 
