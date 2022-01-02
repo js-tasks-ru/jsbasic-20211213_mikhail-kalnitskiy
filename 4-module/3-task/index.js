@@ -1,7 +1,7 @@
 function highlight(table) {
   // let table = document.getElementsByClassName('js-teachers');
 
-  for (let i = 0; i < table.rows.length; i++) {
+  for (let i = 1; i < table.rows.length; i++) {
     let row = table.rows[i]; //коллекция строк
 
     if (row.cells[3].getAttribute('data-available') == "true") {
@@ -14,19 +14,19 @@ function highlight(table) {
     }
 
 
-  for (let i = 0; i < table.rows.length; i++) {
+  for (let i = 1; i < table.rows.length; i++) {
       let row = table.rows[i]; //коллекция строк
-    if (row.cells[2].innerHTML == "male") {
+    if (row.cells[2].data == "male") {
       row.cells[2].classList.add = "m"
-    } else if (row.cells[2].innerHTML == "female") {
+    } else if (row.cells[2].data == "female") {
       row.cells[2].classList.add = "f"
     }
   }
 
-  for (let i = 0; i < table.rows.length; i++) {
+  for (let i = 1; i < table.rows.length; i++) {
     let row = table.rows[i]; //коллекция строк
 
-    if (row.cells[1].innerHTML < 18) {
+    if (row.cells[1].data < 18) {
       row.cells[1].style = "text-decoration: line-through"
     }
   }
