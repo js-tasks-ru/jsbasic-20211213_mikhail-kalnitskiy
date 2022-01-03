@@ -5,11 +5,11 @@ function highlight(table) {
     let row = table.rows[i]; //коллекция строк
 
     if (row.cells[3].getAttribute('data-available') == "true") {
-      row.cells[3].className = "available"
+      row.classList.add("available");
     } else if (row.cells[3].getAttribute('data-available') == "false") {
-      row.cells[3].className = "unavailable"
+      row.classList.add("unavailable");
     } else {
-      row.cells[3].setAttribute('hidden', hidden)
+      row.setAttribute('hidden', true)
      }
     }
 
@@ -17,17 +17,17 @@ function highlight(table) {
   for (let i = 1; i < table.rows.length; i++) {
       let row = table.rows[i]; //коллекция строк
     if (row.cells[2].textContent === "m") {
-      row.cells[2].classList.add('male')
+      row.classList.add('male')
     } else if (row.cells[2].textContent === "f") {
-      row.cells[2].classList.add('female')
+      row.classList.add('female')
     }
   }
 
   for (let i = 1; i < table.rows.length; i++) {
     let row = table.rows[i]; //коллекция строк
 
-    if (row.cells[1].data < 18) {
-      row.cells[1].style.textDecoration = "line-through"
+    if (row.cells[1].textContent < 18) {
+      row.style.textDecoration = "line-through"
     }
   }
 
